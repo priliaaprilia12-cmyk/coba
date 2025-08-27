@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a1b1b, #f5e6d3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+.container {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+h2 {
+  margin-bottom: 20px;
+  color: #fff8f0;
+}
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #fff8f0;
+  color: #4b2c2c;
+}
+button {
+  width: 95%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #6a1b1b;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #4a0f0f;
+}
+.toggle-link {
+  color: #ffe0b2;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+.hidden { display: none; }
+.presensi-list {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+.presensi-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.presensi-list th, .presensi-list td {
+  padding: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  color: #fff8f0;
+}
+.presensi-list th {
+  background: rgba(0,0,0,0.2);
+}

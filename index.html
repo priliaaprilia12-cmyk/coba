@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Presensi Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- REGISTER FORM -->
+    <div id="registerForm">
+      <h2>Buat Akun</h2>
+      <input type="text" id="regName" placeholder="Nama Lengkap" required>
+      <input type="text" id="regUser" placeholder="Username" required>
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPass" placeholder="Password" required>
+      <input type="password" id="regPass2" placeholder="Konfirmasi Password" required>
+      <button onclick="register()">Daftar</button>
+      <span class="toggle-link" onclick="showLogin()">Sudah punya akun? Login</span>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm" class="hidden">
+      <h2>Login</h2>
+      <input type="text" id="loginUser" placeholder="Username" required>
+      <input type="password" id="loginPass" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+      <span class="toggle-link" onclick="showRegister()">Belum punya akun? Daftar</span>
+    </div>
+
+    <!-- PRESENSI DIGITAL -->
+    <div id="presensiApp" class="hidden">
+      <h2>Sistem Presensi Digital</h2>
+      <p>Selamat datang, <span id="userWelcome"></span>!</p>
+      <input type="text" id="presensiNama" placeholder="Nama Lengkap">
+      <input type="text" id="presensiID" placeholder="NIS / ID">
+      <select id="presensiStatus">
+        <option value="Hadir">Hadir</option>
+        <option value="Izin">Izin</option>
+        <option value="Sakit">Sakit</option>
+      </select>
+      <input type="text" id="presensiKet" placeholder="Keterangan">
+      <button onclick="absen('Masuk')">Absen Masuk</button>
+      <button onclick="absen('Keluar')">Absen Keluar</button>
+      <div class="presensi-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>ID</th>
+              <th>Status</th>
+              <th>Waktu</th>
+              <th>Keterangan</th>
+            </tr>
+          </thead>
+          <tbody id="presensiList"></tbody>
+        </table>
+      </div>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
